@@ -1,0 +1,61 @@
+
+Creating an NFT:
+----------------
+1. Determine the content to be turned into an NFT: image or text or something else.
+2. Store the file on IPFS ---> IPFS will return the "image/text/other" content-address-id.
+3. Create the metadata, "an index-card", for the "image/text/other": 
+	{name|description|ipfs://content-address-id}
+4. Store the content's metadata, "index-card" on IPFS ---> IPFS returns "index-card" content-address-id.
+5. Mint a token on blockchain with the "index-card's" content-address-id.
+6. Pin the content-ids created at 2 and 4 to Pinata or NFT.storage.
+
+
+Design:
+-------
+
+NFT Citizen Card: 
+File: benson.raw 
+Braineum Name: rbensonevans@braineumearth.com
+Message: Hello earthlings
+Type: CITIZEN-CARD
+Date Created: 20211120
+
+IPFS ---> benson.txt.cid
+
+Metadata:
+File: benson.meta
+Name: benson-braineum-citizen
+Description: Braineum NFT Citizen Card
+URI: benson.txt.cid
+
+IPFS ---> benson.meta.cid
+
+NFT:
+Token Id: 1
+URI: benson.meta.cid
+
+Token address???
+=============================
+
+NFT Entity Address: 
+File: benson_home.raw 
+Braineum Name: rbensonevans@braineumearth.com
+Earth Address: {address-line-1: 549 East 26th Street; address-line-2: <blank>; city: Brooklyn; state: NY; zip: 11210; country: USA} 
+Type: HOME-ADDRESS | BUSINESS-ADDRESS | GOVERNMENT-ADDRESS 
+Date Created: 20211120
+
+IPFS ---> benson_address.txt.cid
+
+Metadata:
+File: benson_home.meta
+Name: benson-braineum-address
+Description: Braineum NFT (Home|Business|Government) Address
+
+IPFS ---> benson_address.meta.cid
+
+NFT:
+Token Id: 10000
+URI: benson_address.meta.cid
+
+Token address???
+=============================
